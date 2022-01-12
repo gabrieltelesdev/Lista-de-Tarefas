@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+.container {
+    width: 50%;
+    height: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #f0f0f0;
+    box-shadow: rgba(0, 0, 0, 0.295) 5px 5px 5px ;
+}
+
+.inputTarefas {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    font-family: 'Mohave', sans-serif;;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+button {
+    background-color: rgb(112, 111, 111);
+    color: whitesmoke;
+    padding: 10px;
+    font-family: 'Mohave';
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 50px;
+}
