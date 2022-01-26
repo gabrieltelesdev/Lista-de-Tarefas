@@ -18,10 +18,11 @@ function imprimirTarefas(){
     elementoLista.appendChild(itemLista);
 
     const itemDelete = document.createElement("a");
-    const textDelete = document.createTextNode("X");
+    const textDelete = document.createTextNode("delete");
     const pos = tarefas.indexOf(item);
 
-    itemDelete.setAttribute("href", "#")
+    itemDelete.setAttribute('class', 'material-icons');
+    itemDelete.setAttribute('href', '#');
     itemDelete.setAttribute("onclick", `deletaTarefa(${pos})`)
 
     itemDelete.appendChild(textDelete);
