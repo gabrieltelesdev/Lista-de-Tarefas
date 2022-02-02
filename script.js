@@ -43,6 +43,7 @@ function addTarefas() {
         elementoInput.value = "";
 
         imprimirTarefas();
+        listStorage()
     }
 }
 
@@ -50,6 +51,7 @@ document.addEventListener ('keypress', (event) => {
     if(event.key === "Enter"){
     addTarefas();
     imprimirTarefas();
+    listStorage()
 }
   });
   
