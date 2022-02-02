@@ -3,7 +3,7 @@ const elementoLista = document.querySelector("ul");
 const addBtn = document.querySelector("#add");
 const limparBtn = document.querySelector("#limpar")
 
-const tarefas = [];
+const tarefas = JSON.parse(localStorage.getItem("lista_tarefas"));
 
 
 function imprimirTarefas() {
@@ -46,16 +46,30 @@ function addTarefas() {
     }
 }
 
+document.addEventListener ('keypress', (event) => {
+    if(event.key === "Enter"){
+    addTarefas();
+    imprimirTarefas();
+}
+  });
+  
+
 addBtn.setAttribute('onclick', 'addTarefas()');
 
 function deletaTarefa(pos) {
     tarefas.splice(pos, 1);
     imprimirTarefas();
+    listStorage();
 }
 
 function deletaLista(pos) {
     tarefas.splice(pos, tarefas.length);
     imprimirTarefas();
+    listStorage();
 }
 
 limparBtn.setAttribute('onclick', 'deletaLista()');
+
+function listStorage(){
+    localStorage.setItem("lista_tarefas", JSON.stringify(tarefas));
+}
