@@ -3,7 +3,7 @@ const elementoLista = document.querySelector("ul");
 const addBtn = document.querySelector("#add");
 const limparBtn = document.querySelector("#limpar")
 
-const tarefas = JSON.parse(localStorage.getItem("lista_tarefas"));
+const tarefas = JSON.parse(localStorage.getItem("lista_tarefas")) || [];
 
 
 function imprimirTarefas() {
